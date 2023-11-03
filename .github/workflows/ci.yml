@@ -37,12 +37,13 @@ jobs:
           key: ${{ runner.os }}-nuget-${{ hashFiles('**/packages.lock.json') }}
           restore-keys: ${{ runner.os }}-nuget-
 
-      - name: Setup DotNet 6
+      - name: Setup DotNet 8
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version: 6.0.x
+          dotnet-version: 8.0.x
 
       - name: DotNet restore
+        if: ${{ false }}
         run: |
           dotnet new nugetconfig
           dotnet restore -v n
