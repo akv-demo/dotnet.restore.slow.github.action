@@ -12,6 +12,7 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   POWERSHELL_TELEMETRY_OPTOUT: 1
   NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
+  DOTNET_INSTALL_DIR: D:\dotnet
 
 jobs:
   build:
@@ -19,9 +20,9 @@ jobs:
     name: Test
     strategy:
       matrix:
-        n: [1,2]
+        n: [1,2,3,4,5]
         os: [windows-2019, windows-2022]
-        cache: [false]
+        cache: [false, true]
       fail-fast: false
     steps:
       - name: Checkout
