@@ -12,7 +12,7 @@ env:
   DOTNET_SKIP_FIRST_TIME_EXPERIENCE: true
   POWERSHELL_TELEMETRY_OPTOUT: 1
   NUGET_PACKAGES: ${{ github.workspace }}/.nuget/packages
-  # DOTNET_INSTALL_DIR: D:\dotnet
+  ## DOTNET_INSTALL_DIR: D:\dotnet
 
 jobs:
   build:
