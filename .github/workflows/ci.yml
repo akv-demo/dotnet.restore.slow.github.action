@@ -41,7 +41,7 @@ jobs:
           restore-keys: ${{ runner.os }}-nuget-
 
       - name: Setup DotNet 8
-        uses: akv-platform/setup-dotnet@windows-performance
+        uses: akv-platform/setup-dotnet@windows-performance-one-dir
         with:
           dotnet-version: 8.0.x
 
@@ -50,5 +50,4 @@ jobs:
         run: |
           dotnet new nugetconfig
           dotnet restore -v n
-
           
