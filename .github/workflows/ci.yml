@@ -46,7 +46,7 @@ jobs:
           dotnet-version: 8.0.x
 
       - name: DotNet restore
-        if: ${{ false }}
+        if: ${{ true }}
         run: |
           dotnet new nugetconfig
           dotnet restore -v n
