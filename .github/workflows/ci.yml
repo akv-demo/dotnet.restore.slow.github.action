@@ -2,9 +2,9 @@ name: DotNet test link dir
 
 on:
   pull_request:
-    branches: [main]
+    branches: [force-junction]
   push:
-    branches: [main]
+    branches: [force-junction]
 
 env:
   DOTNET_NOLOGO: true
