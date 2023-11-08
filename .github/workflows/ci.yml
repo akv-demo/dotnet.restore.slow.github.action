@@ -48,6 +48,8 @@ jobs:
       - name: DotNet restore
         if: ${{ false }}
         run: |
+          dotnet --version
+          (Get-Command dotnet).Source
           dotnet new nugetconfig
           dotnet restore -v n
       
